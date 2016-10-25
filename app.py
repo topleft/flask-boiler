@@ -57,9 +57,10 @@ def login():
     return render_template('forms/login.html', form=form)
 
 
-@app.route('/register')
+@app.route('/register/')
 def register():
     form = RegisterForm(request.form)
+    print('here', form)
     return render_template('forms/register.html', form=form)
 
 

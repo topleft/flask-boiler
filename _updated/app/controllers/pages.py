@@ -3,7 +3,6 @@ from app.forms import *
 
 blueprint = Blueprint('pages', __name__)
 
-
 ################
 #### routes ####
 ################
@@ -25,7 +24,7 @@ def login():
     return render_template('forms/login.html', form=form)
 
 
-@blueprint.route('/register')
+@blueprint.route('/register/')
 def register():
     form = RegisterForm(request.form)
     return render_template('forms/register.html', form=form)
